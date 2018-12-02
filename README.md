@@ -8,7 +8,7 @@ This module produces a timestamp and a verbose description to aid other Terrafor
 ```hcl
 module resource-tags
 {
-    source = "github.com/devops4me/terraform-aws-resource-tag-ids"
+    source = "github.com/devops4me/terraform-aws-resource-tags"
 }
 ```
 
