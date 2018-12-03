@@ -21,5 +21,5 @@ output out_tag_timestamp
 output out_tag_description
 {
     description = "Ubiquitous note detailing who, when, where and why for every infrastructure component."
-    value       = "${local.describe}"
+    value       = "${local.descriptor}"
 }
