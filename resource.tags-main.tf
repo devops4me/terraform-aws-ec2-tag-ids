@@ -31,6 +31,6 @@ locals
     day_dd    = "${ substr( element( split( "-", timestamp() ), 2 ), 0, 2 ) }"
     hour_hh   = "${ substr( element( split( ":", timestamp() ), 0 ), 11, 2 ) }"
     min_mm    = "${ element( split( ":", timestamp() ), 1 ) }"
-    timestamp = "${ local.year_y }${ local.month_no }${ local.day_dd }-${ local.hour_hh }${ local.min_mm }"
+    timestamp = "${ local.year_y }${ local.month_no }${ local.day_dd }${ local.hour_hh }${ local.min_mm }"
 }
 
