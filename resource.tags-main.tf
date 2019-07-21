@@ -20,8 +20,8 @@ locals
     city_plus  = "${ element( split( "(", data.aws_region.with.description ), 1 ) }"
     city_name  = "${ element( split( ")", local.city_plus ), 0 ) }"
 
-    time_value = timeadd( timestamp(), "1h" )
-    t_readable = formatdate( "EEE, DD MMM YYYY hh:mm:ss", local.time_value )
+    time_value = "${ timeadd( timestamp(), "1h" ) }"
+    t_readable = "${ formatdate( "EEE, DD MMM YYYY hh:mm:ss", local.time_value ) }"
     descriptor = "was created in ${ local.city_name } on ${ local.t_readable }."
 
     /*
