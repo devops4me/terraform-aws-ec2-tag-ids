@@ -11,8 +11,8 @@ data aws_region with {}
 ### [[local]] attributes that help with constructing AWS resource tags ###
 ### ################################################################## ###
 
-locals
-{
+locals {
+
     /*
      | Example Note ~> "was created in Ireland on Tue, 02 Jan 2018 23:12:01."
      */
