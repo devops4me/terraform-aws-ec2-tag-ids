@@ -21,8 +21,9 @@ locals {
     city_name  = element( split( ")", local.city_plus ), 0 )
 
     time_value = timeadd( timestamp(), "1h" )
-    t_readable = replace( formatdate( "EEE, DD MMM YYYY hh:mm:ss", local.time_value ), ",", "" )
-    descriptor = "was created in ${ local.city_name } on ${ local.t_readable }."
+    readable_d = formatdate( "EEE DD MMM YYYY", local.time_value )
+    readable_t = formatdate( "hh:mm:ss", local.time_value )
+    descriptor = "was created in ${ local.city_name } on ${ local.readable_d } at ${ local.readable_t }."
 
     /*
      | Raw Timestamp = 2018-09-11T14:35:59Z
@@ -33,6 +34,6 @@ locals {
     day_dd    = substr( element( split( "-", local.time_value ), 2 ), 0, 2 )
     hour_hh   = substr( element( split( ":", local.time_value ), 0 ), 11, 2 )
     min_mm    = element( split( ":", local.time_value ), 1 )
-    timestamp = local.year_y }${ local.month_no }${ local.day_dd }${ local.hour_hh }${ local.min_mm
+    timestamp = "${ local.year_y }${ local.month_no }${ local.day_dd }${ local.hour_hh }${ local.min_mm }"
 }
 
